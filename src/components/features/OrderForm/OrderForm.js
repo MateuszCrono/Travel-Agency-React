@@ -2,7 +2,7 @@ import propTypes from 'prop-types'
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import OrderSummary from "../OrderSummary/OrderSummary";
-
+// import pricing from '../../../data/pricing.json';
 
 const OrderForm = (props) => (
     <Grid>
