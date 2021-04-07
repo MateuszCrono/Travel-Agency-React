@@ -11,7 +11,6 @@ const OrderSummary = props => {
 }
 OrderSummary.propTypes = {
   tripCost: propTypes.node,
-  Chuj: propTypes.node,
   options: propTypes.object
 }
 
