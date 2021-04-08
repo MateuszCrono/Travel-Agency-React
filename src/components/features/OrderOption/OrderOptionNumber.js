@@ -11,9 +11,11 @@ const OrderOptionNumber = (limits, setOptionValue, price, currentValue) => (
       type='number'
       value={currentValue}
       onChange={event => setOptionValue(event.currentTarget.value)}
-      min={limits.min}
-      max={limits.max}
-    /> People number {formatPrice(price)}
+      min={limits.limits.min}
+      max={limits.limits.max}
+      placeholder={limits.defaultValue}
+    />
+    People number {formatPrice(price)}
   </div>
 );
 
