@@ -16,3 +16,4 @@ Hero.propTypes = {
 };
 
 export default Hero;
+  
