@@ -4,7 +4,7 @@ import {Grid, Row, Col } from 'react-flexbox-grid';
 import OrderSummary from "../OrderSummary/OrderSummary";
 import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
-import { setOrderOption } from '../../../redux/orderRedux';
+
 
 const OrderForm = (props) => (
       <Grid>
@@ -13,8 +13,8 @@ const OrderForm = (props) => (
               <Col md={4}  key={options.id}>
                 <OrderOption
                 {...options}
-                currentValue={options.id}
-                setOrderOption={setOrderOption}
+                currentValue={props.options[options.id]}
+                setOrderOption={props.setOrderOption}
                 />
               </Col>
               ))}

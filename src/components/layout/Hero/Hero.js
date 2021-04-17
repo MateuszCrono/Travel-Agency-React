@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Hero.scss';
 import PropTypes from 'prop-types';
+import styles from './Hero.scss';
 
 const Hero = ({variant = '', titleText, imageSrc, ...otherProps}) => (
   <div {...otherProps} className={styles.component + variant.split(' ').map(name => ' ' + (styles[name] || name)).join('')}>
@@ -12,8 +12,7 @@ const Hero = ({variant = '', titleText, imageSrc, ...otherProps}) => (
 Hero.propTypes = {
   variant: PropTypes.string,
   titleText: PropTypes.node.isRequired,
-  imageSrc: PropTypes.string,
+  imageSrc: PropTypes.string.isRequired
 };
 
 export default Hero;
-  
