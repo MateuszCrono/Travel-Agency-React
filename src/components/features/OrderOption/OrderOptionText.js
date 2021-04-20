@@ -6,7 +6,6 @@ const OrderOptionText = (currentValue, setOptionValue) => (
   <div>
     <input
       type='text'
-      value={currentValue}
       onChange={(event) => setOptionValue(event.currentTarget.value)}
     />
   </div>
