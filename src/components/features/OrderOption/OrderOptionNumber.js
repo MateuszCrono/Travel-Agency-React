@@ -15,7 +15,7 @@ const OrderOptionNumber = ({limits, setOptionValue, price, currentValue}) => (
       max={limits.max}
       placeholder={limits.defaultValue}
     />
-    People number {formatPrice(price)}
+    People number {formatPrice()}
   </div>
 );
 
