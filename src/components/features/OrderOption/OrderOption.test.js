@@ -107,15 +107,12 @@ describe('Component OrderOption', () => {
         }
         case 'icons': {
           it ('contains section and icons', () => {
-            const section = renderedSubcomponent.find('section')
+            const section = renderedSubcomponent.find('section.icon')
             expect(section.length).toBe(1);
-
-            const myIcon = section.find('.icon[name="times-circle"]').length;
-            expect(myIcon).toBe(1)
 
           });
           it('should run setOrderOption function on click', () => {
-            renderedSubcomponent.find('section').simulate('click');
+            renderedSubcomponent.find('section.icon').simulate('click');
             expect(mockSetOrderOption).toBeCalledTimes(1);
             expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue });
           });
@@ -124,9 +121,9 @@ describe('Component OrderOption', () => {
         case 'checkboxes': {
 
           it('should run setOrderOption function on change', () => {
-            renderedSubcomponent.find('input').simulate('change', {currentTarget: {checked: true}});
+            renderedSubcomponent.find(`input[value="${testValue}"]`).simulate('change', {currentTarget: {checked: true}});
             expect(mockSetOrderOption).toBeCalledTimes(1);
-            expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue} );
+            expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id] : [mockProps.currentValue, testValue]});
           });
           break;
         }
@@ -158,10 +155,9 @@ describe('Component OrderOption', () => {
 
             const input = renderedSubcomponent.find('input[type="text"]');
             expect(input.length).toBe(1);
-            expect(input.prop('value')).toBe(mackProps.currentValue);
           });
           it('should run setOrderOption function on change', () => {
-            renderedSubcomponent.find('input').simulate('change', {currentTarget: {value: testValue}});
+            renderedSubcomponent.find('input').simulate('cs', {currentTarget: {value: testValue}});
             expect(mockSetOrderOption).toBeCalledTimes(1);
             expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue} );
           });
