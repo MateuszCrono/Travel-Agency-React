@@ -3,7 +3,7 @@ import styles from './OrderOption.scss'
 import propTypes from 'prop-types'
 import {formatPrice} from '../../../utils/formatPrice'
 
-const OrderOptionNumber = ({limits, setOptionValue, price, currentValue}) => (
+const OrderOptionNumber = ({currentValue, limits, setOptionValue, price}) => (
 
   <div className={styles.number}>
     <input
@@ -15,13 +15,13 @@ const OrderOptionNumber = ({limits, setOptionValue, price, currentValue}) => (
       max={limits.max}
       placeholder={limits.defaultValue}
     />
-    People number {formatPrice()}
+    People number {formatPrice(price)}
   </div>
 );
 
 OrderOptionNumber.propTypes = {
   limits: propTypes.object,
-  currentValue: propTypes.number,
+  currentValue: propTypes.node,
   price: propTypes.string,
   setOptionValue: propTypes.func
 }
