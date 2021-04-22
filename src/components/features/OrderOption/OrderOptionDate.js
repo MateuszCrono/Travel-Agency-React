@@ -8,6 +8,7 @@ const OrderOptionDate = ({setOptionValue}) => {
   return (
     <DatePicker
       selected={startDate}
+      placeholder="MM/DD/YYYY"
       onChange={date => (setStartDate(date), setOptionValue(date))}
     />
   );
