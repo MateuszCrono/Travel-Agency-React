@@ -74,6 +74,21 @@
       "tripId": "Pleasant travel in cool Turkey",
       "tripCountry": "5cc1d10130dfa407e2e54e20",
       "id": 5
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "das",
+      "contact": "sda",
+      "start-date": "2021-04-26T22:00:00.000Z",
+      "totalCost": "$51,381",
+      "tripCost": "$51,380.61",
+      "tripId": "Pleasant travel in cool Turkey",
+      "tripCountry": "5cc1d10130dfa407e2e54e20",
+      "id": 6
     }
   ]
 }

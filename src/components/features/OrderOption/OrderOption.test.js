@@ -157,7 +157,7 @@ describe('Component OrderOption', () => {
             expect(input.length).toBe(1);
           });
           it('should run setOrderOption function on change', () => {
-            renderedSubcomponent.find('input').simulate('cs', {currentTarget: {value: testValue}});
+            renderedSubcomponent.find('input').simulate('change', {currentTarget: {value: testValue}});
             expect(mockSetOrderOption).toBeCalledTimes(1);
             expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue} );
           });
