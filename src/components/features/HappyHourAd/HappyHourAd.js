@@ -21,15 +21,6 @@ class HappyHourAd extends React.Component {
 
     return Math.round((nextNoon.getTime() - currentTime.getTime())/1000);
   }
-
-  // getPromotionTime (){
-  //   if (this.getCountdownTime > 23 * 60 * 60) {
-  //     return 'BIG DISCOUNT IS HERE';
-  //   } else {
-  //     return null;
-  //   }
-  // }
-
   static propTypes = {
     title: propTypes.string,
     promoDescription: propTypes.node,
