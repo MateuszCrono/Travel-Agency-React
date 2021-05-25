@@ -28,7 +28,7 @@ class DaysToSummer extends React.Component {
   render() {
     return (
       <div className={styles.component}>
-          {this.getSummerTime() == 0 ? null : (this.getSummerTime() == 1 ? `${this.getSummerTime()}'day to summer'` : `${this.getSummerTime()} days to summer`)}
+          {this.getSummerTime() == 0 ? null : (this.getSummerTime() == 1 ? `${this.getSummerTime()}day to summer` : `${this.getSummerTime()} days to summer`)}
       </div>
     );
   }
